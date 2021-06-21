@@ -1,0 +1,77 @@
+/*Базовые стили кнопки */
+.handle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 113px;
+  min-height: 44px;
+
+  cursor: pointer;
+
+  padding: 4px 15px;
+
+  border-radius: 5px;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+
+  transition-property: transform;
+  transition-duration: var(--transition-function);
+  transition-timing-function: var(--timing-function);
+
+  @media screen and (min-width: 768px) {
+    min-width: 125px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    min-width: 136px;
+  }
+
+  /*Базовые стили для span*/
+  &__title {
+    display: block;
+
+    font-family: var(--main-page-font);
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  &__watched {
+    @media screen and (min-width: 320px) {
+      max-width: 113px;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+
+  &__queque {
+    @media screen and (min-width: 320px) {
+      max-width: 113px;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+/*Кнопка не активная popup*/
+.popup-button {
+  border: 2px solid var(--secondary-button-color);
+  color: var(--secondary-button-color);
+}
+/*Стили по нажатию на кнопку*/
+.accent-button {
+  border: 2px solid var(--button-bg-color);
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+
+.header-button {
+  border: 2px solid var(--button-border-color);
+  color: var(--button-text-color);
+}

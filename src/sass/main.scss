@@ -1,0 +1,27 @@
+// utils
+@import './utils/mixins';
+@import './utils/placeholder';
+@import './utils/variables';
+@import './utils/visually-hidden';
+
+// base
+@import './base/common';
+@import './base/container';
+
+// layout
+@import './layout/header';
+@import './layout/library';
+@import './layout/gallery';
+@import './layout/footer';
+
+// components
+@import './components/modal';
+@import './components/modalTeam';
+@import './components/pagination';
+@import './components/spinner';
+@import './components/arrowTop';
+@import './components/handle-button-click';
+@import './components/theme';
+@import './components/authorisation';
+@import './components/slider';
+@import './components/trailer';

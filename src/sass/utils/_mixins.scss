@@ -1,0 +1,21 @@
+@mixin grid($margin) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1 * $margin;
+  margin-top: -1 * $margin;
+}
+
+@mixin grid-item($margin, $qty) {
+  flex-basis: calc(100% / #{$qty} - #{$margin});
+  margin-left: $margin;
+  margin-top: $margin;
+}
+
+@mixin font {
+  font-family: var(--main-page-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #000000;
+}

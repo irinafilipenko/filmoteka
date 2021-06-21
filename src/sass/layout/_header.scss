@@ -1,0 +1,212 @@
+.header-section {
+  padding-top: 20px;
+}
+
+.header-main {
+  min-width: 320px;
+  height: 230px;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--black-text-color);
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/header-bg-main-mobile.jpg);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.navigation__logo {
+  top: 46px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #818181;
+
+  &:hover {
+    color: var(--accent-bg-color);
+  }
+}
+.logo__icon {
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.logo__name {
+  display: none;
+  font-family: var(--main-page-font);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.17;
+  color: var(--white-text-color);
+  transition: color 300ms var(--timing-function);
+}
+
+.site-nav__list {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+
+  color: var(--white-text-color);
+}
+
+.site-nav__item:not(:last-child) {
+  margin-right: 39px;
+}
+
+.site-nav__link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 300ms var(--timing-function);
+  &:hover {
+    color: var(--accent-bg-color);
+  }
+}
+
+.site-nav__link.current {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--accent-bg-color);
+  }
+}
+
+/* // form */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px 0 0;
+  min-width: 280px;
+}
+
+.search-field {
+  width: 100%;
+  border: 0;
+  border-bottom: 0.5px solid var(--white-text-color);
+  outline: 0;
+  color: var(--white-text-color);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form-label {
+    font-size: 18px;
+    cursor: text;
+    top: 10px;
+  }
+}
+
+.form-label {
+  position: absolute;
+  top: -15px;
+  display: block;
+  transition: 0.2s;
+  color: var(--white-text-color);
+}
+
+.search-field:focus {
+  ~ .form-label {
+    position: absolute;
+    top: -20px;
+    display: block;
+    transition: 0.2s;
+    font-size: 18px;
+    color: var(--accent-bg-color);
+  }
+  padding-bottom: 6px;
+  font-weight: 500;
+  border-width: 2px;
+  border-image: linear-gradient(to right, var(--accent-bg-color), #ff001b);
+  border-image-slice: 1;
+}
+
+.search-btn {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: transparent;
+  color: var(--white-text-color);
+  scale: 1;
+  transition: scale 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    scale: 1.3;
+  }
+}
+.header-warning {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #ff001b;
+}
+
+@media screen and (min-width: 768px) {
+  .header-main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-bg-main-tablet.jpg);
+  }
+  .header-section {
+    padding-top: 25px;
+  }
+  .logo__icon {
+    margin-right: 10px;
+  }
+  .logo__name {
+    display: inline-flex;
+  }
+  .search-form {
+    padding: 0;
+    width: 336px;
+  }
+  .header-warning {
+    width: 616px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-bg-main-desktop.jpg);
+  }
+  .header-warning {
+    width: 782px;
+    text-align: center;
+  }
+}
